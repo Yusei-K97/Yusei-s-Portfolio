@@ -38,6 +38,9 @@ export const HeaderMenu = () => {
                     <Box>Contact</Box>
                 </Stack></HStack>
             </Link>
+            <a href='https://github.com/Yusei-K97'>
+                <i className="fab fa-github gold fa-lg"></i>
+            </a>
         </Menu>
     );
 };

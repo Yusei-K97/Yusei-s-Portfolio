@@ -12,7 +12,7 @@ import { Sliding } from "./components/tools/layouts/Sliding";
 export const Routing = () => {
     return (
         <BrowserRouter>
-            <Header />
+            <Header/>
             <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/aboutme" element={<AboutMe />}/>
@@ -22,8 +22,8 @@ export const Routing = () => {
                 {/* 予期せぬエラー時用、NotFoundコンポ*/}
                 <Route path="*" element={<NotFound />} />
             </Routes>
-            <Sliding />
-            <Footer />
+            <Sliding/>
+            <Footer/>
         </BrowserRouter>
-  );
+    );
 }
