@@ -9,6 +9,7 @@ export const Sliding = () => {
     return (
         <>
             <Swiper
+                loop={true}
                 spaceBetween = {30}
                 slidesPerView={3}
                 autoplay={{

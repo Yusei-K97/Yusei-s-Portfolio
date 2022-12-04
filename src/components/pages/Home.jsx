@@ -1,14 +1,14 @@
 import React from "react";
-import { Avatar, HStack, Stack, Heading, Box } from '@chakra-ui/react'
+import { Avatar, HStack, Stack, Heading, Box } from '@chakra-ui/react';
 
 export const Home = () => {
     return(
       <>
         <HStack>
-          <Avatar src= />
+          <Avatar size="xl" src="https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_1280.jpg" />
           <Stack>
-            <Heading size="sm">Y-Kimura</Heading>
-            <Box>welcome to my portfolio website!<br />Take your time.</Box>
+            <Heading size="l">Y-Kimura</Heading>
+            <Box size="xl">welcome to my portfolio website!<br />Take your time.</Box>
           </Stack>
         </HStack>
 
