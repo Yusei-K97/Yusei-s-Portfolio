@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Center, Box } from "@chakra-ui/react";
+import { Center } from "@chakra-ui/react";
 import { Triangle } from "react-loader-spinner";
 
 export const Loading = memo(() => {
