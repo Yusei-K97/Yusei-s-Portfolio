@@ -14,9 +14,8 @@
   
   /* Color/shape of burger icon bars on hover*/
   .bm-burger-bars-hover {
-    background: rgb(205, 24, 24);
+    background: white;
   }
-  
   /* Position and sizing of clickable cross button */
   .bm-cross-button {
     height: 30px;

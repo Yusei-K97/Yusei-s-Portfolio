@@ -11,34 +11,34 @@ export const HeaderMenu = () => {
                 <HStack>
                 <Avatar src="https://cdn.pixabay.com/photo/2017/07/11/00/24/house-2492054__480.png"/>
                 <Stack>
-                    <Box>Home</Box>
+                    <Box _hover={{color: "teal.500"}}>Home</Box>
                 </Stack></HStack></Link>
             <Link to="/aboutme">
                 <HStack>
                 <Avatar src="https://cdn.pixabay.com/photo/2014/08/13/07/25/i-love-myself-417267__480.jpg"/>
                 <Stack>
-                    <Box>About Me</Box>
+                    <Box _hover={{color: "teal.500"}}>About Me</Box>
                 </Stack></HStack></Link>
             <Link to="/myskill">
                 <HStack>
                 <Avatar src="https://cdn.pixabay.com/photo/2017/10/21/12/36/training-2874597__480.jpg"/>
                 <Stack>
-                    <Box>My Skill</Box>
+                    <Box _hover={{color: "teal.500"}}>My Skill</Box>
                 </Stack></HStack></Link>
             <Link to="/production">
             <HStack>
                 <Avatar src="https://cdn.pixabay.com/photo/2014/11/04/08/07/mark-516277__480.jpg"/>
                 <Stack>
-                    <Box>Production</Box>
+                    <Box _hover={{color: "teal.500"}}>Production</Box>
                 </Stack></HStack></Link>
             <Link to="/contact">
                 <HStack>
                 <Avatar src="https://cdn.pixabay.com/photo/2019/07/03/05/58/envelope-4313721__480.png"/>
                 <Stack>
-                    <Box>Contact</Box>
+                    <Box _hover={{color: "teal.500"}}>Contact</Box>
                 </Stack></HStack>
             </Link>
-            <a href='https://github.com/Yusei-K97'>
+            <a href='https://github.com/Yusei-K97' >
                 <i className="fab fa-github gold fa-lg"></i>
             </a>
         </Menu>

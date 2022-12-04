@@ -12,7 +12,8 @@ export const Header = () => {
                 fontSize="4xl"
                 p={2}
                 fontFamily="fancy"
-                color="#bea76f"
+                color="blue.500"
+                _hover={{color: "teal.500"}}
                 >
                 <Link to="/">Yusei's<br/>Portfolio</Link>
                 <a href='https://github.com/Yusei-K97'>

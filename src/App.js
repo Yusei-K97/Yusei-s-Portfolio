@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ChakraProvider } from "@chakra-ui/react";
 import { Routing } from './Routing';
-import Fonts from "./components/tools/styles/fonts";
 import { theme } from "./components/tools/styles/theme";
 import { Loading } from "./components/tools/Loading";
 
@@ -13,13 +12,11 @@ const App = () => {
   if (isLoading)
     return (
       <ChakraProvider theme={theme}>
-        <Fonts />
         <Loading />
       </ChakraProvider>
     );
   return (
     <ChakraProvider theme={theme}>
-      <Fonts />
       <Routing />
     </ChakraProvider>
   );
