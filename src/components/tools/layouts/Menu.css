@@ -14,7 +14,7 @@
   
   /* Color/shape of burger icon bars on hover*/
   .bm-burger-bars-hover {
-    background: white;
+    background: pink;
   }
   /* Position and sizing of clickable cross button */
   .bm-cross-button {
@@ -38,7 +38,7 @@
   
   /* General sidebar styles */
   .bm-menu {
-    background: linear-gradient(pink, orange);
+    background: linear-gradient(#00ffff, pink);
     padding: 10px 0;
     font-size: 35px;
   }

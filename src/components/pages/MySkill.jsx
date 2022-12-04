@@ -1,7 +1,10 @@
 import React from "react";
+import { CenterTitle } from "./AboutMe";
+
+
 
 export const MySkill = () => {
     return(
-        <h1>MySkill</h1>
+        <CenterTitle title="My Skill"/>
     );
 };
