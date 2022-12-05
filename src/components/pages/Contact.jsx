@@ -1,124 +1,92 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import styled from "styled-components";
-import { useState } from "react";
-import { init, send } from 'emailjs-com';
+import { Center, Box } from '@chakra-ui/react';
 
 export const Contact = () => {
-    const [fullName, setFullName] = useState('');
-    const [company, setCompany] = useState('');
-    const [mail, setMail] = useState('');
-    const [message, setMessage] = useState('');
+  const form = useRef();
 
-    const sendMail = () => {
-        const userID = process.env.REACT_APP_USER_ID = 1;
-        const serviceID = process.env.REACT_APP_SERVICE_ID = 1;
-        const templateID = process.env.REACT_APP_TEMPLATE_ID = 1;
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-        if (
-            userID !== undefined &&
-            serviceID !== undefined &&
-            templateID !== undefined
-        ) {
-            init(userID);
-            const template_param = {
-                to_name: fullName,
-                company: company,
-                from_email: mail,
-                message: message,
-            };
+    emailjs.sendForm('service_0t6p0aw', 'template_mh2lhpf', form.current, 'oYro3-OQndKAPa669')
+      .then((result) => {
+          console.log(result.text);
+          console.log("メールを送信しました。")
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
-            send(serviceID, templateID, template_param).then(() => {
-                window.alert('Thank you for your inquiry.');
-                setFullName('');
-                setCompany('');
-                setMail('');
-                setMessage('');
-            });
-        }
+  return (
+    <>
+    <Center>
+    <StyledContactForm>
+    <Box fontFamily="cursive" fontSize="6xl">Contact</Box>
+      <form ref={form} onSubmit={sendEmail}>
+        <label>Name</label>
+        <input type="text" name="user_name" />
+        <label>Email</label>
+        <input type="email" name="user_email" />
+        <label>Message</label>
+        <textarea name="message" />
+        <input type="submit" value="Send" />
+      </form>
+    </StyledContactForm>
+    </Center>
+    </>
+  );
+};
+
+const StyledContactForm = styled.div`
+  width: 400px;
+
+  form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+
+    input {
+      width: 100%;
+      height: 50px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid rgb(220, 220, 220);
+
+      &:focus {
+        border: 2px solid rgba(0, 206, 158, 1);
+      }
     }
-    const handleClick = (e) => {
-        e.preventDefault();
-        sendMail();
-    };
 
-  // 必須項目
-    const disableSend = fullName === '' || mail === '' || message === '';
+    textarea {
+      max-width: 100%;
+      min-width: 100%;
+      width: 100%;
+      max-height: 100px;
+      min-height: 100px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid rgb(220, 220, 220);
 
-    return (
-    <SContainer>
-      <STitle>Contact</STitle>
-      <SForm>
-          <SInput
-            type="text"
-            value={fullName}
-            placeholder='Your name'
-            onChange={(e) => setFullName(e.target.value)}
-          />
-          <SInput
-            type="text"
-            required
-            value={company}
-            placeholder='Company Name'
-            onChange={(e) => setCompany(e.target.value)}
-          />
-          <SInput
-            type="email"
-            value={mail}
-            placeholder='Email address'
-            onChange={(e) => setMail(e.target.value)}
-          />
-          <STextarea
-            type="text"
-            rows="10"
-            value={message}
-            placeholder='Please write your message.'
-            onChange={(e) => setMessage(e.target.value)}
-            />
-            <SButton
-            onClick={handleClick}
-            disabled={disableSend}
-            >
-            Submit
-            </SButton>
-        </SForm>
-    </SContainer>
-    );
-}
+      &:focus {
+        border: 2px solid rgba(0, 206, 158, 1);
+      }
+    }
 
-const SContainer = styled.div`
-  min-height: 100vh;
-`
+    label {
+      margin-top: 1rem;
+    }
 
-const STitle = styled.h2`
-  font-family: 'Noto Serif',serif;
-  text-align: center;
-  font-size: 24px;
-  letter-spacing: .08em;
-`
-
-const SForm = styled.form`
-  min-width: 300px;
-  max-width: 550px;
-  width: 50%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-`
-const SInput = styled.input`
-  height: 36px;
-  padding: 0 12px;
-  margin: 24px 0 0 0;
-`
-
-const STextarea = styled.textarea`
-  padding: 12px 12px 0;
-  margin: 24px 0 0 0;
-`
-
-const SButton = styled.button`
-  height: 40px;
-  margin: 24px 0 0 0;
-  background: #bea76f;
-  :disabled {
-    background: gray;
+    input[type="submit"] {
+      margin-top: 2rem;
+      cursor: pointer;
+      background: rgb(249, 105, 14);
+      color: white;
+      border: none;
+    }
   }
-`
+`;

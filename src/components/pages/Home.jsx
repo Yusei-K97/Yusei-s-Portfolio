@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Text, Center, Flex } from '@chakra-ui/react';
+import Three from "../tools/HomeObj/Three";
 
 export const Home = () =>{
     const c = useRef();
@@ -13,6 +14,7 @@ export const Home = () =>{
     }, [c]);
 
     return(
+      <>
       <Flex w='100%' h='100vh' justifyContent='center' alignItems='center'>
         <Center
           ref={c}
@@ -24,5 +26,8 @@ export const Home = () =>{
           <Text as='c' textAlign='center'>Welcome to my<br />portfolio website!<br />Please take your time.</Text>
         </Center>
       </Flex>
+      <Three />
+      </>
+
   );
 }

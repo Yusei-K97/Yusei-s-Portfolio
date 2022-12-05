@@ -26,12 +26,6 @@ export const Mv = (props) => {
                     trigger: "#wrapper-a",
                     start: "top center",
                     end: "bottom center",
-                    onEnter: () => {
-                        console.log("Scroll In")
-                    },
-                    onEnterBack: () => {
-                    console.log("Scroll Back")
-                    },
                 },
             }
         )

@@ -9,7 +9,7 @@ export const Pic1 = () => {
 }
 
 export const Pic2 = () => {
-    return <img src={pic2} alt="AboutMe" height="10%"/>
+    return <img src={pic2} alt="AboutMe" />
 }
 
 export const Pic3 = () => {
