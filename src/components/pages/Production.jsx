@@ -1,7 +1,7 @@
 import React from "react";
-import { CenterTitle } from "./AboutMe";
+import { CenterTitle } from "../tools/styles/CenterTitle";
 import { Link } from "react-router-dom";
-import { Twi } from "./MySkill";
+import { Twi } from "../tools/styles/LikeTwi";
 
 export const Production = () => {
     return (

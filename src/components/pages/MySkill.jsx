@@ -1,6 +1,5 @@
-import React from "react";
-import { CenterTitle } from "./AboutMe";
-import { HStack, Avatar, Stack, Heading, Text } from '@chakra-ui/react';
+import { CenterTitle } from "../tools/styles/CenterTitle";
+import { Twi } from "../tools/styles/LikeTwi";
 
 const Skills = [
     {
@@ -35,31 +34,14 @@ const Skills = [
     },
 ];
 
-export const Twi = (props) => {
-    return(
-        <HStack bgColor="gray.900"
-            color="white"
-            border="1px"
-            borderColor="gray.500"
-            padding={5}
-            rounded={20}
-            margin={5}
-        >
-            <Avatar src={props.src} size="2xl" />
-                <Stack>
-                    <Heading fontSize="3xl">{props.heading}</Heading>
-                        <Text fontSize="4xl">{props.text}</Text>
-                </Stack>
-        </HStack>
-);
-};
+
 export const MySkill = () => {
     return(
         <>
             <CenterTitle title="My Skill" />
             {Skills.map((props) => {
-                return <Twi src={props.src} heading={props.heading} text={props.text} />;
-            })};
+                return <Twi src={props.src} heading={props.heading} text={props.text} />
+            })}
         </>
     );
 };

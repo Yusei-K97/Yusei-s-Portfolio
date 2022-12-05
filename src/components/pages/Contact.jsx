@@ -9,9 +9,9 @@ export const Contact = () => {
     const [message, setMessage] = useState('');
 
     const sendMail = () => {
-        const userID = process.env.REACT_APP_USER_ID = eD63Cw0bHcRgTBzKy;
-        const serviceID = process.env.REACT_APP_SERVICE_ID = service_0t6p0aw;
-        const templateID = process.env.REACT_APP_TEMPLATE_ID = template_mh2lhpf;
+        const userID = process.env.REACT_APP_USER_ID = 1;
+        const serviceID = process.env.REACT_APP_SERVICE_ID = 1;
+        const templateID = process.env.REACT_APP_TEMPLATE_ID = 1;
 
         if (
             userID !== undefined &&

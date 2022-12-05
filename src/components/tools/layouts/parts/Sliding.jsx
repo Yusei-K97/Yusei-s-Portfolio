@@ -1,10 +1,10 @@
 import {Swiper, SwiperSlide} from 'swiper/react';
-import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper/core';
+import SwiperCore, { Autoplay, Pagination } from 'swiper/core';
 import { Link } from "react-router-dom";
-import { Pic1, Pic2, Pic3, Pic4, Pic5 } from "./img/imgExp";
+import { Pic1, Pic2, Pic3, Pic4, Pic5 } from "../img/imgExp";
 import 'swiper/css';
 
-SwiperCore.use([Autoplay, Pagination, Navigation]);
+SwiperCore.use([Autoplay, Pagination]);
 export const Sliding = () => {
     return (
         <>
