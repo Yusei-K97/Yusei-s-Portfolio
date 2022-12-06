@@ -1,14 +1,14 @@
-title: Yusei's Portfolio
-author: Yusei Kimura
+### `Yusei's Portfolio`
+### `author: Yusei-K`
 
-Purpose:
+### `Purpose`
 I created this portfolio for output of learning React.js.
 
-Page:
+### `Page`
 You can see pages on the website =>
     1.Home 2.AboutMe 3.MySkill 4.Production 5.Contact
 
-Main Library:
+### `Main Library`
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.8",
     "react-dom": "^18.2.0",
